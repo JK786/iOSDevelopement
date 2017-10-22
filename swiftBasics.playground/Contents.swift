@@ -368,6 +368,30 @@ print(Rank.queen.rawValue)
 
 
 //Trying out enumerations.
+//Enum case cannot have raw value if Enum doesn't have a raw type
+
+enum Card:Int{
+    
+    case spade = 1
+    case hearts = 2
+    
+    func Colour() -> String {
+        
+        switch self{
+         case .spade : return "Black"
+        case .hearts : return "Red"
+        }
+     }
+    
+}
+
+var pickedCard = Card.spade;
+pickedCard.Colour()
 
 
+//TODO:Associated values for enums. Do read through that
+
+
+/*Use struct to create a structure. Structures support many of the same behaviors as classes, including methods and initializers. One of the most important differences between structures and classes is that structures are always copied when they are passed around in your code, but classes are passed by reference.
+*/
 
