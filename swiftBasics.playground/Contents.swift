@@ -395,3 +395,12 @@ pickedCard.Colour()
 /*Use struct to create a structure. Structures support many of the same behaviors as classes, including methods and initializers. One of the most important differences between structures and classes is that structures are always copied when they are passed around in your code, but classes are passed by reference.
 */
 
+
+// PROTOCOLS
+
+/*
+ A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.
+
+Swift reports an error at compile-time if a protocol requirement is not fulfilled.)
+*/
+
