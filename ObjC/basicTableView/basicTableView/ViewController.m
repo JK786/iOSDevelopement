@@ -64,4 +64,11 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString * messageForAlert = [NSString stringWithFormat:@"SelectedRow:%@",self.ListOfCricketers[indexPath.row],nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"SELECTED ROW" message:messageForAlert preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 @end
