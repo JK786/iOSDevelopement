@@ -52,6 +52,7 @@
     }
     
     cell.textLabel.text = self.ListOfCricketers[indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"facebook"];
     return cell;
 }
 
