@@ -41,18 +41,25 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSString *cellIdentifier = @"SimpleIdentifier";
+    NSString *cellIdentifier = @"crickete";
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SimpleIdentifier"];
+    //[tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+        if(cell == nil){
+        
+        NSLog(@"Hello");
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        
     }
     
+    NSLog(@"WHY");
     cell.textLabel.text = self.ListOfCricketers[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"facebook"];
+     cell.detailTextLabel.text = @"What a cricketer";
+    
+   
     return cell;
 }
 
